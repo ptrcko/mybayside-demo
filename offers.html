@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers at MyBayside</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="grid-container">
+        <h1>Offers at MyBayside</h1>
+        <p>Discover exclusive local deals and redeem them now!</p>
+    </div>
+</header>
+
+<!-- Menu Bar -->
+<nav class="menu-bar">
+    <div class="grid-container">
+        <ul class="menu align-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="offers.html">Offers</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="grid-container">
+    <!-- Filter Section -->
+    <section class="filter-bar">
+        <div class="grid-x grid-padding-x">
+            <div class="cell small-12 medium-6">
+                <input type="text" placeholder="Search for offers..." class="search-bar">
+            </div>
+            <div class="cell small-12 medium-6">
+                <select class="filter-dropdown">
+                    <option value="">Filter by category</option>
+                    <option value="automotive">Automotive</option>
+                    <option value="beauty">Beauty & Personal Care</option>
+                    <option value="fitness">Fitness & Wellness</option>
+                    <option value="hospitality">Hospitality</option>
+                    <option value="home">Home Services</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Grid -->
+    <section class="offers-grid">
+        <!-- Example Offer Cards -->
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>AutoCare Garage</h3>
+            <p>10% off up to $30</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $15</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Brighton Spa</h3>
+            <p>Free manicure with a pedicure booking</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $25</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Wellness Studio</h3>
+            <p>Free week trial for new members</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $50</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Luxury Wheels</h3>
+            <p>Free car wash with a service booking</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $20</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Craft Haven</h3>
+            <p>Free pattern kit with craft supplies over $50</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $10</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Zen Fit Gym</h3>
+            <p>Buy 10 fitness classes, get 2 free</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $40</p>
+        </div>
+
+        <div class="offer-card" onclick="toggleQR(this)">
+            <h3>Heavenly Desserts</h3>
+            <p>Buy one, get one free dessert</p>
+            <a href="#" class="button primary">Redeem Now</a>
+            <div class="qr-code-section">
+                <img src="images/placeholder-qr-code.jpg" alt="QR Code" class="qr-code">
+                <p class="qr-label">Show this at the venue</p>
+            </div>
+            <p class="savings">Save $15</p>
+        </div>
+    </section>
+</main>
+
+<footer class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <p>&copy; 2024 MyBayside. All rights reserved. Visit us at <a href="https://mybayside.com.au">mybayside.com.au</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleQR(card) {
+        const qrSection = card.querySelector('.qr-code-section');
+        qrSection.style.display = qrSection.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
