@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Deals at MyBayside</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline styles for simplicity */
+        .deals-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .deals-tags button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .deals-tags button:hover,
+        .deals-tags button.active {
+            background-color: #0056b3;
+        }
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .deal-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .deal-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .deal-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .deal-card p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .deal-card .button {
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="grid-container">
+        <h1>Daily Deals at MyBayside</h1>
+        <p>Curated just for you! Find amazing deals tailored to your interests.</p>
+    </div>
+</header>
+
+<!-- Menu Bar -->
+<nav class="menu-bar">
+    <div class="grid-container">
+        <ul class="menu align-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="daily-deals.html">Daily Deals</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="grid-container">
+    <!-- Filter Tags -->
+    <div class="deals-tags">
+        <button class="tag" data-tag="all">All</button>
+        <button class="tag" data-tag="food">Food</button>
+        <button class="tag" data-tag="health">Health</button>
+        <button class="tag" data-tag="shopping">Shopping</button>
+        <button class="tag" data-tag="kids">Kids</button>
+        <button class="tag" data-tag="fitness">Fitness</button>
+        <button class="tag" data-tag="beauty">Beauty</button>
+    </div>
+
+    <!-- Deals Grid -->
+    <section class="deals-grid">
+        <!-- Deal 1 -->
+        <div class="deal-card" data-tags="food">
+            <h3>20% Off at Joe's Diner</h3>
+            <p><strong>Category:</strong> Food</p>
+            <p>Enjoy a delicious meal at Joe's Diner with a 20% discount on all orders.</p>
+            <p><strong>Expiry:</strong> Dec 10, 2024</p>
+            <p><strong>Redeemed:</strong> 45/100</p>
+            <a href="#" class="button primary">Redeem Now</a>
+        </div>
+    
+        <!-- Deal 2 -->
+        <div class="deal-card" data-tags="health fitness">
+            <h3>Free Personal Training Session</h3>
+            <p><strong>Category:</strong> Fitness</p>
+            <p>Sign up for a gym membership and get a free personal training session.</p>
+            <p><strong>Expiry:</strong> Dec 15, 2024</p>
+            <p><strong>Redeemed:</strong> 60/200</p>
+            <a href="#" class="button primary">Claim Offer</a>
+        </div>
+    
+        <!-- Deal 3 -->
+        <div class="deal-card" data-tags="shopping kids">
+            <h3>Buy 1 Toy, Get 1 Free</h3>
+            <p><strong>Category:</strong> Kids, Shopping</p>
+            <p>Stock up on toys for the little ones with this amazing BOGO deal.</p>
+            <p><strong>Expiry:</strong> Dec 8, 2024</p>
+            <p><strong>Redeemed:</strong> 90/150</p>
+            <a href="#" class="button primary">Shop Now</a>
+        </div>
+    
+        <!-- Deal 4 -->
+        <div class="deal-card" data-tags="beauty shopping">
+            <h3>50% Off Skincare Products</h3>
+            <p><strong>Category:</strong> Beauty</p>
+            <p>Upgrade your skincare routine with half-price products from Glow & Co.</p>
+            <p><strong>Expiry:</strong> Dec 12, 2024</p>
+            <p><strong>Redeemed:</strong> 30/100</p>
+            <a href="#" class="button primary">Shop Now</a>
+        </div>
+    
+        <!-- Deal 5 -->
+        <div class="deal-card" data-tags="kids food">
+            <h3>Kids Eat Free on Sundays</h3>
+            <p><strong>Category:</strong> Kids, Food</p>
+            <p>Bring the family to Happy Days Cafe and enjoy free kids' meals on Sundays.</p>
+            <p><strong>Expiry:</strong> Dec 17, 2024</p>
+            <p><strong>Redeemed:</strong> 25/50</p>
+            <a href="#" class="button primary">Redeem Offer</a>
+        </div>
+    
+        <!-- Deal 6 -->
+        <div class="deal-card" data-tags="health">
+            <h3>Free Dental Check-Up</h3>
+            <p><strong>Category:</strong> Health</p>
+            <p>New patients can get a complimentary dental check-up at Smile Bright.</p>
+            <p><strong>Expiry:</strong> Dec 20, 2024</p>
+            <p><strong>Redeemed:</strong> 10/30</p>
+            <a href="#" class="button primary">Book Now</a>
+        </div>
+    
+        <!-- Deal 7 -->
+        <div class="deal-card" data-tags="food shopping">
+            <h3>10% Off All Groceries</h3>
+            <p><strong>Category:</strong> Food, Shopping</p>
+            <p>Save 10% on your entire grocery bill at GreenGrocers this week.</p>
+            <p><strong>Expiry:</strong> Dec 14, 2024</p>
+            <p><strong>Redeemed:</strong> 75/200</p>
+            <a href="#" class="button primary">Claim Deal</a>
+        </div>
+    
+        <!-- Deal 8 -->
+        <div class="deal-card" data-tags="fitness">
+            <h3>Join Now, Get First Month Free</h3>
+            <p><strong>Category:</strong> Fitness</p>
+            <p>Sign up at BayFit Gym and enjoy your first month of membership for free.</p>
+            <p><strong>Expiry:</strong> Dec 25, 2024</p>
+            <p><strong>Redeemed:</strong> 40/100</p>
+            <a href="#" class="button primary">Sign Up</a>
+        </div>
+    
+        <!-- Deal 9 -->
+        <div class="deal-card" data-tags="shopping">
+            <h3>25% Off Electronics</h3>
+            <p><strong>Category:</strong> Shopping</p>
+            <p>Upgrade your gadgets with 25% off at Techie World.</p>
+            <p><strong>Expiry:</strong> Dec 9, 2024</p>
+            <p><strong>Redeemed:</strong> 120/200</p>
+            <a href="#" class="button primary">Shop Now</a>
+        </div>
+    
+        <!-- Deal 10 -->
+        <div class="deal-card" data-tags="beauty kids">
+            <h3>Free Haircuts for Kids</h3>
+            <p><strong>Category:</strong> Kids, Beauty</p>
+            <p>Back-to-school special: free haircuts for kids at Snip Snap Salon.</p>
+            <p><strong>Expiry:</strong> Dec 15, 2024</p>
+            <p><strong>Redeemed:</strong> 50/75</p>
+            <a href="#" class="button primary">Book Now</a>
+        </div>
+    
+        <!-- Additional Deals -->
+        <!-- Repeat similar structure for deals 11-20 -->
+    </section>
+    
+    
+</main>
+
+<footer class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <p>&copy; 2024 MyBayside. All rights reserved. Visit us at <a href="https://mybayside.com.au">mybayside.com.au</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tags = document.querySelectorAll('.tag');
+        const deals = document.querySelectorAll('.deal-card');
+
+        tags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                // Remove active class from all tags
+                tags.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tag
+                tag.classList.add('active');
+
+                const selectedTag = tag.getAttribute('data-tag');
+                
+                deals.forEach(deal => {
+                    // Show all if "all" is selected
+                    if (selectedTag === 'all' || deal.getAttribute('data-tags').includes(selectedTag)) {
+                        deal.style.display = 'block';
+                    } else {
+                        deal.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
