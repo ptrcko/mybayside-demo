@@ -656,4 +656,8 @@ body {
         position: relative;
         z-index: 1; /* Ensure hero image is below the buttons */
     }
+    img.business-logo{
+        float:left;
+        width: 175px;
+    }
 }
