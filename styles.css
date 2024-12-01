@@ -619,3 +619,41 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+/* Default behavior (Desktop and Tablet) */
+.buttons-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Mobile-First: Buttons on top of hero image */
+@media (max-width: 768px) {
+    .hero-section {
+        position: relative;
+        height: 300px; /* Explicit height for consistent positioning */
+    }
+
+    .buttons-section {
+        position: absolute;
+        top: 35%; /* Adjusted vertical position */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -35%); /* Centering with new top value */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        z-index: 2; /* Ensure buttons are above the hero image */
+        margin: 0; /* Remove any default margins */
+    }
+
+    .buttons-section .button {
+        margin-bottom: 10px; /* Space between buttons */
+        width: 80%; /* Adjust button size for mobile */
+        max-width: 250px;
+    }
+
+    .hero-image {
+        background: url('images/hero-image.jpg') center/cover no-repeat;
+        height: 100%; /* Match the height of the hero section */
+        position: relative;
+        z-index: 1; /* Ensure hero image is below the buttons */
+    }
+}
