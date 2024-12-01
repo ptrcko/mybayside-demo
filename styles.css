@@ -26,11 +26,32 @@ body {
 
 /* Hero Image Section */
 .hero-image {
-    background: url('images/hero-image.jpg') center/cover no-repeat;
-    height: 300px; /* Adjust height based on design preference */
+    height: 300px;
     width: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
 /* Buttons Section */
 .buttons-section {
     text-align: center;
@@ -442,4 +463,159 @@ footer a:hover {
 
 .button.primary:hover {
     background-color: #0056b3;
+}
+/* Tab Navigation */
+.business-tabs {
+    margin-top: 20px;
+}
+
+.tabs-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tabs-list .tab-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.2s;
+}
+
+.tabs-list .tab-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tab Contents */
+.tab-content {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* Key Staff Section */
+.key-staff {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.key-staff h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #007bff;
+}
+
+.staff-member {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+}
+
+.staff-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Profile Steps */
+.profile-step {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tag {
+    background-color: #e9ecef;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+
+.tag.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Buttons */
+.button.primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Form */
+#contact-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-details-form label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+#contact-details-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

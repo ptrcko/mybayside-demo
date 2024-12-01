@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Moon - Business Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".tab-link");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", event => {
+                    event.preventDefault();
+
+                    // Remove active classes
+                    tabs.forEach(t => t.classList.remove("active"));
+                    tabContents.forEach(content => content.classList.add("hidden"));
+
+                    // Activate the clicked tab and its content
+                    const target = document.querySelector(tab.getAttribute("href"));
+                    tab.classList.add("active");
+                    target.classList.remove("hidden");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <div class="grid-container">
+        <h1>Half Moon</h1>
+        <p>A Bayside local favorite, where great food and a passionate team come together.</p>
+    </div>
+</header>
+<!-- Menu Bar -->
+<nav class="menu-bar">
+    <div class="grid-container">
+        <ul class="menu align-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+</nav>
+<main class="grid-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image" style="background-image: url('images/team-shot.jpg');">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Half Moon</h1>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Business Information with Logo -->
+    <section class="business-info">
+        <div class="grid-x grid-margin-x">
+            <!-- Business Logo -->
+            <div class="cell small-12 medium-3 text-center">
+                <img src="images/half-moon-logo.webp" alt="Half Moon Logo" class="business-logo">
+            </div>
+            <!-- Business Details -->
+            <div class="cell small-12 medium-9">
+                <h2>About Half Moon</h2>
+                <p>Established in 1926 as "The Terminal," Half Moon has been a cornerstone of Brighton's community. In 2003, the Morris Group revitalized this historic venue, blending its rich heritage with modern hospitality. Today, Half Moon stands as a testament to enduring traditions and contemporary excellence, offering a welcoming atmosphere for all.</p>
+                <p><strong>Location:</strong> 120 Church Street, Brighton, VIC 3186</p>
+                <p><strong>Manager:</strong> John</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <section class="business-tabs">
+        <ul class="tabs-list">
+            <li><a href="#jobs" class="tab-link active">Jobs</a></li>
+            <li><a href="#offers" class="tab-link">Offers</a></li>
+            <li><a href="#events" class="tab-link">Events</a></li>
+        </ul>
+    </section>
+
+    <!-- Tab Contents -->
+    <section id="jobs" class="tab-content">
+        <h2>Jobs at Half Moon</h2>
+        <div class="job-card">
+            <h3>Barista</h3>
+            <p><strong>Location:</strong> 120 Church Street, Brighton</p>
+            <p>Join our team of coffee enthusiasts! Morning shifts available.</p>
+            <a href="profile.html" class="button secondary">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Chef</h3>
+            <p><strong>Location:</strong> 120 Church Street, Brighton</p>
+            <p>Bring your culinary creativity to our dynamic kitchen team.</p>
+            <a href="profile.html" class="button secondary">Apply Now</a>
+        </div>
+    </section>
+
+    <section id="offers" class="tab-content hidden">
+        <h2>Offers at Half Moon</h2>
+        <div class="offer-card">
+            <h3>Happy Hour</h3>
+            <p><strong>When:</strong> 5 PM - 7 PM, Monday to Friday</p>
+            <p>Enjoy 2-for-1 on all cocktails.</p>
+        </div>
+        <div class="offer-card">
+            <h3>Weekend Brunch Special</h3>
+            <p><strong>When:</strong> Saturdays and Sundays</p>
+            <p>Complimentary coffee with every brunch meal.</p>
+        </div>
+    </section>
+
+    <section id="events" class="tab-content hidden">
+        <h2>Events at Half Moon</h2>
+        <div class="event-card">
+            <h3>Live Jazz Night</h3>
+            <p><strong>When:</strong> Every Friday, 8 PM</p>
+            <p>Join us for an evening of live music and fine dining.</p>
+        </div>
+        <div class="event-card">
+            <h3>Wine Tasting Evening</h3>
+            <p><strong>When:</strong> Last Thursday of every month</p>
+            <p>Explore a curated selection of local and international wines.</p>
+        </div>
+    </section>
+
+    <!-- Highlight Key Staff -->
+    <section class="key-staff">
+        <h2>Meet the Team</h2>
+        <div class="staff-member">
+            <img src="images/staff-1.webp" alt="Jane Doe - Head Chef" class="staff-photo">
+            <p><strong>Jane Doe</strong><br>Head Chef</p>
+        </div>
+        <div class="staff-member">
+            <img src="images/staff-2.webp" alt="Mark Smith - Bar Manager" class="staff-photo">
+            <p><strong>Mark Smith</strong><br>Bar Manager</p>
+        </div>
+        <div class="staff-member">
+            <img src="images/staff-3.webp" alt="Emily Brown - Customer Experience Lead" class="staff-photo">
+            <p><strong>Emily Brown</strong><br>Customer Experience Lead</p>
+        </div>
+    </section>
+</main>
+
+<footer class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <p>&copy; 2024 MyBayside. All rights reserved. Visit us at <a href="https://mybayside.com.au">mybayside.com.au</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

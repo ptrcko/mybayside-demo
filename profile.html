@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="grid-container">
+        <h1>Create Your Job Seeker Profile</h1>
+        <p>Let us know more about you, so we can match you with the perfect job!</p>
+    </div>
+</header>
+
+<!-- Menu Bar -->
+<nav class="menu-bar">
+    <div class="grid-container">
+        <ul class="menu align-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="grid-container">
+    <!-- Step 1: Who They Are -->
+    <section class="profile-step" id="step-1">
+        <h2>Step 1: Who Are You?</h2>
+        <p>Select the option that best describes you:</p>
+        <div class="tags">
+            <button type="button" class="tag">#SchoolStudent</button>
+            <button type="button" class="tag">#FirstJob</button>
+            <button type="button" class="tag">#UniStudent</button>
+            <button type="button" class="tag">#Graduate</button>
+            <button type="button" class="tag">#CareerRestart</button>
+            <button type="button" class="tag">#CareerChange</button>
+            <button type="button" class="tag">#Flexible</button>
+            <button type="button" class="tag">#IndustryExpert</button>
+        </div>
+
+        <h3>What Type of Work Are You Looking For?</h3>
+        <div class="tags">
+            <button type="button" class="tag">#FullTime</button>
+            <button type="button" class="tag">#PartTime</button>
+            <button type="button" class="tag">#HolidayWork</button>
+            <button type="button" class="tag">#Contract</button>
+            <button type="button" class="tag">#Temporary</button>
+        </div>
+
+        <button class="button primary" type="button" onclick="nextStep(1)">Next</button>
+    </section>
+
+    <!-- Step 2: Top Skills -->
+    <section class="profile-step hidden" id="step-2">
+        <h2>Step 2: Your Top Skills</h2>
+        <p>Select up to three skills to highlight:</p>
+        <div class="tags skills">
+            <button type="button" class="tag">#ExcelWizard</button>
+            <button type="button" class="tag">#DocumentExpert</button>
+            <button type="button" class="tag">#CustomerChampion</button>
+            <button type="button" class="tag">#CreativeSolver</button>
+            <button type="button" class="tag">#SalesPro</button>
+            <button type="button" class="tag">#SocialMediaGuru</button>
+            <button type="button" class="tag">#EventPlanner</button>
+            <button type="button" class="tag">#TimeManager</button>
+            <button type="button" class="tag">#CodeNinja</button>
+            <button type="button" class="tag">#TeamCollaborator</button>
+            <button type="button" class="tag">#Presenter</button>
+            <button type="button" class="tag">#Leader</button>
+            <button type="button" class="tag">#OpenToLearn</button>
+            <button type="button" class="tag">#HardWorker</button>
+            <button type="button" class="tag">#Friendly</button>
+            <button type="button" class="tag">#Adaptable</button>
+        </div>
+
+        <button class="button primary" type="button" onclick="nextStep(2)">Next</button>
+    </section>
+
+    <!-- Step 3: Contact Details -->
+    <section class="profile-step hidden" id="step-3">
+        <h2>Step 3: Contact Details</h2>
+        <form id="contact-details-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="age">Your Age</label>
+            <input type="number" id="age" placeholder="Enter your age" min="16" required>
+
+            <button class="button primary" type="submit" onclick="submitProfile()">Submit Profile</button>
+        </form>
+    </section>
+</main>
+
+<footer class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <p>&copy; 2024 MyBayside. All rights reserved. Visit us at <a href="https://mybayside.com.au">mybayside.com.au</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let selectedSkills = new Set();
+    let selectedTags = new Set();
+
+    function nextStep(currentStep) {
+        const currentSection = document.getElementById(`step-${currentStep}`);
+        const nextSection = document.getElementById(`step-${currentStep + 1}`);
+        currentSection.classList.add('hidden');
+        nextSection.classList.remove('hidden');
+    }
+
+    document.querySelectorAll('.tag').forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.closest('.skills')) {
+                if (selectedSkills.size < 3 || button.classList.contains('selected')) {
+                    button.classList.toggle('selected');
+                    if (button.classList.contains('selected')) {
+                        selectedSkills.add(button.textContent);
+                    } else {
+                        selectedSkills.delete(button.textContent);
+                    }
+                } else {
+                    alert('You can select only three skills.');
+                }
+            } else {
+                button.classList.toggle('selected');
+                if (button.classList.contains('selected')) {
+                    selectedTags.add(button.textContent);
+                } else {
+                    selectedTags.delete(button.textContent);
+                }
+            }
+        });
+    });
+
+    function submitProfile() {
+        alert('Profile Submitted! Check the console for selected details.');
+        console.log('Selected Life Stage/Work Preferences:', Array.from(selectedTags));
+        console.log('Selected Skills:', Array.from(selectedSkills));
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Section */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+.menu-bar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.menu-bar .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-bar .menu li {
+    list-style: none;
+}
+
+.menu-bar .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-bar .menu li a:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Image Section */
+.hero-image {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Buttons Section */
+.buttons-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button.large.rounded {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.button.large.rounded:hover {
+    background-color: #0056b3;
+}
+
+/* Text Section */
+.text-section {
+    padding: 20px 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.text-section p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Register Section */
+.register-section {
+    padding: 20px 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.register-section .button.primary {
+    background-color: #28a745;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+}
+
+.register-section .button.primary:hover {
+    background-color: #218838;
+}
+
+/* Offers Grid */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Offer Card */
+.offer-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.offer-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.offer-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.offer-card p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Savings Row */
+.offer-card .savings {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* QR Code Section */
+.qr-code-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.qr-label {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Tab Navigation */
+.business-tabs {
+    margin-top: 20px;
+}
+
+.tabs-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tabs-list .tab-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.2s;
+}
+
+.tabs-list .tab-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Tab Contents */
+.tab-content {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.hidden {
+    display: none;
+}
+
+/* Key Staff Section */
+.key-staff {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.key-staff h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #007bff;
+}
+
+.staff-member {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+}
+
+.staff-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
