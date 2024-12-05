@@ -3,63 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyBayside - Connecting Jobs, Offers, and Events</title>
+    <title>Events at MyBayside</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
-    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Header Section -->
 <header class="header">
     <div class="grid-container">
-        <h1>MyBayside</h1>
-        <p>Your local platform for Jobs, Offers, and Events</p>
+        <h1>Events at MyBayside</h1>
+        <p>Discover what's happening in your local community!</p>
     </div>
 </header>
 
-<!-- Hero Image Section -->
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-image" style="background-image: url('images/hero-image.jpg');">
+<!-- Menu Bar -->
+<nav class="menu-bar">
+    <div class="grid-container">
+        <ul class="menu align-center">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+</nav>
 
+<main class="grid-container">
+    <!-- Filter Section -->
+    <section class="filter-bar">
+        <h2>Filter Events</h2>
+        <div class="grid-x grid-padding-x">
+            <div class="cell small-12 medium-6">
+                <input type="text" placeholder="Search for events..." class="search-bar">
+            </div>
+            <div class="cell small-12 medium-6 tags">
+                <button type="button" class="tag" data-filter="food">Food</button>
+                <button type="button" class="tag" data-filter="family">Family</button>
+                <button type="button" class="tag" data-filter="shopping">Shopping</button>
+                <button type="button" class="tag" data-filter="community">Community</button>
+                <button type="button" class="tag" data-filter="health">Health</button>
+                <button type="button" class="tag" data-filter="fitness">Fitness</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Grouped by Date -->
+    <section class="events-group" id="today">
+        <h2>Today</h2>
+    
+        <!-- Food -->
+        <div class="event-card" data-tags="food">
+            <div class="event-card-content">
+                <img src="images/half-moon-logo.webp" alt="Half Moon Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Steak Night at the Half Moon</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> The Half Moon Hotel</p>
+                    <p><strong>Price:</strong> $25 for a steak and drink combo</p>
+                    <p>This weekly special is perfect for steak lovers. No registration needed—just walk in!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="food">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Pizza Feast Night</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Luigi's Pizzeria, Hampton</p>
+                    <p><strong>Price:</strong> $15 per person for unlimited pizza</p>
+                    <p>Bring your appetite for an all-you-can-eat pizza night!</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Family -->
+        <div class="event-card" data-tags="family">
+            <div class="event-card-content">
+                <img src="images/brighton-beach-logo.png" alt="Brighton Beach Hotel Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Kids Eat Free</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Brighton Beach Hotel</p>
+                    <p><strong>Offer:</strong> Free kids' meals with any adult main course</p>
+                    <p>Family-friendly fun! No booking required, but come early to grab a table.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="family">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Community Movie Night</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Sandringham Town Hall</p>
+                    <p><strong>Price:</strong> Free</p>
+                    <p>Bring the whole family for a classic movie screening. Popcorn is on us!</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Shopping -->
+        <div class="event-card" data-tags="shopping">
+            <div class="event-card-content">
+                <img src="images/mecca-logo.png" alt="Mecca Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>20% Off Event at Mecca</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Mecca, Church Street</p>
+                    <p><strong>Savings:</strong> 20% off storewide for one day only!</p>
+                    <p>Don't miss out on this exclusive shopping event. No registration required.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="shopping">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Pop-Up Boutique Market</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Bay Street, Brighton</p>
+                    <p><strong>Offer:</strong> Exclusive discounts and giveaways</p>
+                    <p>Shop from unique local vendors for handmade goods and fashion.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Health -->
+        <div class="event-card" data-tags="health">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Free Health Checkup</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Bayside Medical Clinic</p>
+                    <p><strong>Price:</strong> Free</p>
+                    <p>Take advantage of a free health checkup. Walk-ins welcome!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="health">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Wellness Seminar</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Hampton Community Center</p>
+                    <p><strong>Price:</strong> Free</p>
+                    <p>Learn about stress management and healthy habits from local experts.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Fitness -->
+        <div class="event-card" data-tags="fitness">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Outdoor Bootcamp</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Sandringham Park</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <p>Join a high-energy workout session to start your day strong.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="fitness">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Yoga Flow Class</h3>
+                    <p><strong>When:</strong> Wednesday, November 29</p>
+                    <p><strong>Location:</strong> Brighton Yoga Studio</p>
+                    <p><strong>Price:</strong> $15 per session</p>
+                    <p>Unwind with an evening yoga flow session. Suitable for all levels.</p>
+                </div>
+            </div>
         </div>
     </section>
     
 
-<main class="grid-container">
-    <!-- Three Buttons -->
-    <section class="grid-x grid-padding-x align-center buttons-section">
-        <div class="cell small-12 medium-4">
-            <a href="jobs.html" class="button large rounded">Jobs</a>
+    <section class="events-group" id="tomorrow">
+        <h2>Tomorrow</h2>
+    
+        <!-- Food -->
+        <div class="event-card" data-tags="food">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Taco Thursday at El Mexicano</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> El Mexicano, Bay Street</p>
+                    <p><strong>Offer:</strong> $2 tacos all day</p>
+                    <p>Celebrate Taco Thursday with delicious, freshly made tacos. No booking required.</p>
+                </div>
+            </div>
         </div>
-        <div class="cell small-12 medium-4">
-            <a href="offers.html" class="button large rounded">Offers</a>
+    
+        <div class="event-card" data-tags="food">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Wine Pairing Dinner</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> The Cellar, Brighton</p>
+                    <p><strong>Price:</strong> $75 per person</p>
+                    <p>Enjoy a gourmet five-course meal paired with premium wines. Reservation required.</p>
+                </div>
+            </div>
         </div>
-        <div class="cell small-12 medium-4">
-            <a href="events.html" class="button large rounded">Events</a>
+    
+        <!-- Family -->
+        <div class="event-card" data-tags="family">
+            <div class="event-card-content">
+                <img src="images/brighton-beach-logo.png" alt="Brighton Beach Hotel Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Kids Movie Morning</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Brighton Cinema</p>
+                    <p><strong>Price:</strong> $5 per ticket</p>
+                    <p>Bring the kids for a screening of a family-friendly movie. Free popcorn included!</p>
+                </div>
+            </div>
         </div>
-        <div class="cell small-12 medium-4">
-            <a href="daily-deals.html" class="button large rounded">Daily Deals</a>
+    
+        <div class="event-card" data-tags="family">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Playdate in the Park</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Bayside Playground, Sandringham</p>
+                    <p><strong>Free Entry</strong></p>
+                    <p>A great opportunity for kids to play and parents to connect. Bring a picnic!</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Shopping -->
+        <div class="event-card" data-tags="shopping">
+            <div class="event-card-content">
+                <img src="images/mecca-logo.png" alt="Mecca Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Exclusive Beauty Masterclass</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Mecca, Church Street</p>
+                    <p><strong>Price:</strong> $20 (redeemable on purchase)</p>
+                    <p>Learn beauty tips and tricks from experts in this hands-on session. Limited spots available!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="shopping">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Luxury Handbag Sale</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Designer Collective, Hampton</p>
+                    <p><strong>Savings:</strong> Up to 40% off</p>
+                    <p>Exclusive one-day discounts on premium handbags and accessories. No registration needed.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Health -->
+        <div class="event-card" data-tags="health">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Free Wellness Workshop</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Wellness Center, Hampton</p>
+                    <p><strong>Free Entry</strong></p>
+                    <p>Learn the basics of mindfulness and stress management. Pre-register to secure your spot.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="health">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Yoga for Beginners</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Zen Studio, Brighton</p>
+                    <p><strong>Price:</strong> $10 per session</p>
+                    <p>Start your yoga journey with a class designed for beginners.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Community -->
+        <div class="event-card" data-tags="community">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Community Clean-Up Day</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Bayside Beach</p>
+                    <p><strong>Free Entry</strong></p>
+                    <p>Join the community to clean up the beach and keep our environment pristine.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="event-card" data-tags="community">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Placeholder Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Local Art Exhibition</h3>
+                    <p><strong>When:</strong> Thursday, November 30</p>
+                    <p><strong>Location:</strong> Bayside Art Gallery</p>
+                    <p><strong>Free Entry</strong></p>
+                    <p>Discover works from talented local artists. No registration required.</p>
+                </div>
+            </div>
         </div>
     </section>
+    
 
-    <!-- Application Description -->
-    <section class="text-section">
-        <h2>About My Bayside</h2>
-        <p>
-            MyBayside is your community’s gateway to exciting job opportunities, exclusive local offers, and engaging events. 
-            Whether you're a business owner or a resident, MyBayside connects you with what matters most in your area.
-        </p>
-    </section>
+    <section class="events-group" id="later">
+        <h2>Later</h2>
+        <div class="event-card" data-tags="fitness health">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Beach Yoga Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Beach Yoga Session</h3>
+                    <p><strong>When:</strong> Sunday, December 3</p>
+                    <p><strong>Location:</strong> Sandringham Beach</p>
+                    <p><strong>Price:</strong> $15 per person</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Register as a Business -->
-    <section class="register-section">
-        <h2>Register as a Business</h2>
-        <p>
-            Join MyBayside to share your job openings, promote offers, and organize events for the Bayside community. 
-            Grow your local presence today!
-        </p>
-        <a href="management.html" class="button primary large">Register Now</a>
+        <div class="event-card" data-tags="community shopping">
+            <div class="event-card-content">
+                <img src="images/placeholder-logo.webp" alt="Artisan Market Logo" class="event-logo">
+                <div class="event-details">
+                    <h3>Artisan Market Day</h3>
+                    <p><strong>When:</strong> Saturday, December 2</p>
+                    <p><strong>Location:</strong> Hampton Street, Hampton</p>
+                    <p><strong>Free Entry</strong></p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
@@ -71,6 +364,24 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
+<script>
+    // Filter functionality
+    document.querySelectorAll('.tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+            const filter = tag.dataset.filter;
+            const cards = document.querySelectorAll('.event-card');
+
+            cards.forEach(card => {
+                const tags = card.dataset.tags.split(' ');
+                if (tags.includes(filter) || filter === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>

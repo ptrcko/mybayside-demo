@@ -52,11 +52,32 @@ body {
     font-weight: bold;
     text-align: center;
 }
-/* Buttons Section */
+/* General button styles */
 .buttons-section {
-    text-align: center;
-    margin-top: 20px;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
 }
+
+/* Buttons overlay the hero on mobile */
+@media (max-width: 768px) {
+    .buttons-section {
+        position: absolute;
+        top: 50%; /* Adjust vertical position */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .buttons-section .button {
+        width: 90%; /* Full-width buttons for smaller screens */
+        margin: 10px 0; /* Space between buttons */
+    }
+}
+
 
 .button.large.rounded {
     display: inline-block;
@@ -630,6 +651,8 @@ body {
     .hero-section {
         position: relative;
         height: 300px; /* Explicit height for consistent positioning */
+        top: 50%; /* Adjust vertical position for smaller screens */
+        padding: 10px;
     }
 
     .buttons-section {
@@ -645,9 +668,8 @@ body {
     }
 
     .buttons-section .button {
-        margin-bottom: 10px; /* Space between buttons */
-        width: 80%; /* Adjust button size for mobile */
-        max-width: 250px;
+        width: 90%; /* Full-width buttons for smaller screens */
+        margin: 10px 0; /* Space between buttons */
     }
 
     .hero-image {
@@ -660,4 +682,26 @@ body {
         float:left;
         width: 175px;
     }
+}
+/* Buttons below the hero on desktop */
+@media (min-width: 769px) {
+    .buttons-section {
+        position: static; /* Default flow places the buttons after the hero image */
+        transform: none; /* Reset transform for default flow */
+        margin-top: 20px; /* Adds space between the hero image and buttons */
+    }
+
+    .buttons-section .button {
+        width: auto; /* Reset button width */
+    }
+}
+
+/* Sticky Filter Bar */
+.filter-bar {
+    position: sticky;
+    top: 0; /* Adjust based on the height of the menu bar */
+    z-index: 999; /* Stays above content but below menu bar */
+    background-color: white; /* Matches page background */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 }
